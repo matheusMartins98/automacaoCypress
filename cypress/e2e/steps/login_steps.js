@@ -1,4 +1,4 @@
-/// reference types="Cypress" />
+/// <reference types="cypress" />
 
 import LoginPage from "../pages/login_page";
 const loginPage = new LoginPage
@@ -19,7 +19,9 @@ When(/^clicar no botão entrar$/, () => {
 loginPage.clicarEmLogin()
 });
 
-Then(/^tenho acesso com sucesso$/, () => {
+Then(/^tenho acesso negado$/, () => {
+
+	loginPage.validarMsgInvalida()
 	
 });
 

@@ -5,7 +5,7 @@ Feature: Login
         Given eu acesse a página home da aplicação
         When eu inserir meu email "<email>" e minha senha "<senha>"
         And clicar no botão entrar
-        Then tenho acesso com sucesso
+        Then tenho acesso negado
 
         Examples:
             | cenario           | email               | senha    |

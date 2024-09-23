@@ -1,4 +1,4 @@
-/// reference types="Cypress" />
+/// <reference types="cypress" />
 
 import LoginElements from "../elements/login_elements"
 
@@ -19,7 +19,13 @@ class LoginPage {
     }
 
     clicarEmLogin() {
-        cy.contains(loginElements.btnLogin()).click()
+        cy.get(loginElements.btnLogin()).click()
+    }
+
+    validarMsgInvalida() {
+
+        cy.get(loginElements.msgInvalid()).should('contain', 'Please check your emal and password')
+       
     }
 
 } export default LoginPage
